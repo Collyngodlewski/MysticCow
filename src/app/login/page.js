@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import styles from "../../app/page.module.css";
 import Link from "next/link";
-import { supabase } from "@/lib/supabase";
+import { supabase } from "../../lib/supabase";
 import { useRouter } from "next/navigation";
 
 export default function Login() {
