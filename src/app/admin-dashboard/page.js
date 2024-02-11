@@ -3,6 +3,8 @@ import React from "react";
 import styles from "../../app/page.module.css";
 import { supabase } from "../../lib/supabase";
 import { useRouter } from "next/navigation";
+import UploadArtwork from "../../components/uploadArtwork";
+import Link from "next/link";
 
 function AdminDashboard() {
   const router = useRouter();
@@ -18,20 +20,12 @@ function AdminDashboard() {
     }
   };
 
-  async function sessionReload() {
-    const { data, error } = await supabase.auth.getSession();
-    console.log(data.session);
-    if (data.session === null) {
-      router.push("/");
-      console.log("No session");
-      // find a better way to reroute, can see it.
-    }
-  }
-
-  sessionReload();
   return (
-    <div className={styles.main}>
-      <div className={styles.description}>Admin Dashboard</div>
+    <div className={styles.container}>
+      <div className={styles.admin}>
+        Admin Dashboard
+        <Link href="/admin-dashboard/upload">Upload Artwork</Link>
+      </div>
       <button onClick={logout}>Logout</button>
     </div>
   );

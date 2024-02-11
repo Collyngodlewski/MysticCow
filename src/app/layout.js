@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
-          crossorigin
+          crossOrigin="true"
         ></link>
         <link
           href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Fascinate&family=Playfair+Display&display=swap"

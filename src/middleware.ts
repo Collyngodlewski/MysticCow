@@ -15,8 +15,8 @@ export async function middleware(req: NextRequest) {
     // console.log(session); 
 
     if(!session){
-        // return NextResponse.rewrite(new URL('/', req.url))
-        // console.log("No session")
+        console.log("No session");
+        return NextResponse.rewrite(new URL('/', req.url));
     }
 
     return res
@@ -24,6 +24,7 @@ export async function middleware(req: NextRequest) {
 
 export const config = {
     matcher: [
-        '/((?!api|_next/static|_next/image|favicon.ico).*)',
+        // '/((?!api|_next/static|_next/image|favicon.ico).*)',
+        '/admin-dashboard'
     ]
 }
