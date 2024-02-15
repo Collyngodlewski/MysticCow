@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import styles from "../../app/page.module.css";
-import supabase from "../../lib/supabase";
+import styles from "../../../app/page.module.css";
+import supabase from "../../../lib/supabase";
 import { useEffect, useState } from "react";
 
 function Commissions() {

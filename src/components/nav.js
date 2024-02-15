@@ -6,7 +6,9 @@ function Nav() {
   return (
     <div className={styles.container}>
       <div className={styles.nav}>
-        <Link href="/contact">Contact</Link>
+        <Link className={styles.links} href="/contact">
+          Contact
+        </Link>
         <Link href="/">
           <Image
             src="/Logo.jpg"
@@ -16,7 +18,9 @@ function Nav() {
           ></Image>
         </Link>
         {/* <Link href="/login">Login</Link> */}
-        <Link href="/commissions-artwork">Artwork</Link>
+        <Link className={styles.links} href="/commissions-artwork">
+          Artwork
+        </Link>
       </div>
     </div>
   );

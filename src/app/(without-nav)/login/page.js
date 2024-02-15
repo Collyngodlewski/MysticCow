@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import styles from "../../app/page.module.css";
+import styles from "../../../app/page.module.css";
 import Link from "next/link";
-import { supabase } from "../../lib/supabase";
+import supabase from "../../../lib/supabase";
 import { useRouter } from "next/navigation";
 
 export default function Login() {
@@ -34,26 +34,31 @@ export default function Login() {
 
   return (
     <div className={styles.login}>
-      <div className={styles.input}>
-        <label>Email</label>
+      <div className={styles.inputs}>
+        {/* <label>Email</label> */}
         <input
+          placeholder="Email"
+          className={styles.input}
           type="text"
           name="email"
           value={data?.email}
           onChange={handleChange}
         />
       </div>
-      <div className={styles.input}>
-        <label>Password</label>
+      <div className={styles.inputs}>
+        {/* <label>Password</label> */}
         <input
+          placeholder="Password"
+          className={styles.input}
           type="password"
           name="password"
           value={data?.password}
           onChange={handleChange}
         />
       </div>
-      {/* <Link href="/admin-dashboard">Admin</Link> */}
-      <button onClick={login}>Login</button>
+      <button className={styles.loginButton} onClick={login}>
+        Login
+      </button>
     </div>
   );
 }
