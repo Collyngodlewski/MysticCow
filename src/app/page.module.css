@@ -32,27 +32,67 @@
 }
 
 .adminPage {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   /* border-bottom: 2px solid yellow; */
   height: 100vh;
 }
 
 .adminHeader {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
 .adminImage {
   height: 125px;
   width: auto;
 }
+.adminContainer {
+  /* border: 1px solid black; */
+  display: flex;
+  height: 100%;
+  background-color: #a164d3;
+}
+
+.adminMain {
+  /* border: 1px solid blue; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* margin: 0 auto; */
+}
+.adminArtworkContainer {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.adminArtwork {
+  border: 1px solid black;
+  height: 25%;
+  width: 25%;
+}
+
+.tab {
+  display: inline-block;
+  /* width: 100%; */
+  padding: 10px;
+  border: 2px solid #ccc;
+  /* border-bottom: none; */
+  text-align: center;
+  cursor: pointer;
+}
+.tab:hover {
+  background: #f0f0f0;
+}
 
 .adminSideBar {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   width: 15%;
-  height: 100%;
+  /* height: 100%; */
+  /* margin-right: auto; */
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  background-color: #af87d0;
 }
 
 .login {
